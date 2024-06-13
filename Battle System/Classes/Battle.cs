@@ -29,7 +29,9 @@ namespace Battle_System.Classes
                 Console.WriteLine($"you attack the {enemy.GetName()} " +
                     $"with your {player.GetWeaponName()} " +
                     $"and deal {PlayerAttack} damage");
-                Console.WriteLine($"{enemy.GetName()} has {enemy.GetHp()} health");
+                Console.WriteLine($"{enemy.GetName()} has {Math.Max(enemy.GetHp(), 0)} health");
+
+
 
                 Console.ReadLine();
 

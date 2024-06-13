@@ -35,4 +35,31 @@ namespace Battle_System.Classes.Entities
             EquipItem(new Weapon("sword", "a basic sword", 1));
         }
     }
+
+    public class Magician : Player
+    {
+        public Magician(string name) : base(name)
+        {
+            strength = 10;
+            ClassName = "Magician";
+            EquipItem(new Weapon("wand", "a long wand", 4));
+        }
+        public override int Attack()
+        {
+            Console.WriteLine("Yeah!");
+            return 1000;
+        }
+    }
+
+    public class  Knight : Player
+    {
+        public Knight(string name) : base(name)
+        {
+            strength = 12;
+            ClassName = "Knight";
+            EquipItem(new Weapon("axe", "deadly axe", 6));
+        }
+    }
+
+
 }

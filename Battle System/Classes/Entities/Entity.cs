@@ -23,8 +23,8 @@ namespace Battle_System.Classes.Entities
         public Entity(string name)
         {
             this.name = name;
-            hp = 10;
-            mp = 10;
+            hp = 100;
+            mp = 100;
             strength = 1;
             rng = new Random();
             accuracy = 0.8f;
@@ -33,7 +33,7 @@ namespace Battle_System.Classes.Entities
         {
             return name;
         }
-        public int Attack()
+        public virtual int Attack()
         {
             if (rng.NextDouble() < accuracy)
             {
