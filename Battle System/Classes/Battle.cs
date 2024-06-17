@@ -31,9 +31,15 @@ namespace Battle_System.Classes
                     $"and deal {PlayerAttack} damage");
                 Console.WriteLine($"{enemy.GetName()} has {Math.Max(enemy.GetHp(), 0)} health");
 
-
-
                 Console.ReadLine();
+
+                if (enemy.GetHp() == 0)
+                {
+                    Console.WriteLine($"Congrats!, You have defeated the {enemy.GetName()}");
+                    Console.ReadLine();
+                    over = true;
+                    break;
+                }
 
                 int enemyAttack = enemy.Attack();
                 player.Damage(enemyAttack);
@@ -41,9 +47,17 @@ namespace Battle_System.Classes
                     $"with a {enemy.GetWeaponName()} " +
                     $"and deals {enemyAttack} damage");
                 Console.WriteLine($"you have {player.GetHp()} health");
-
+           
                 Console.ReadLine();
+
+                
+                if (player.GetHp() == 0)
+                {
+                    Console.WriteLine($"Game over, The {enemy.GetName()} has defeated you");
+                    break;
+                }
             }
+
         }
     }
 }

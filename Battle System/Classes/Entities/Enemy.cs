@@ -18,7 +18,7 @@ namespace Battle_System.Classes.Entities
     {
         public Spiders() : base("Spiders")
         {
-            strength = 10;
+            strength = 1;
             EquipItem(new Weapon("wand", "a long wand", 4));
         }
     }
@@ -27,7 +27,7 @@ namespace Battle_System.Classes.Entities
     {
         public Goblin() : base("Goblin")
         {
-            strength = 10;
+            strength = 3;
             EquipItem(new Weapon("wand", "a long wand", 4));
         }
     }
@@ -36,7 +36,7 @@ namespace Battle_System.Classes.Entities
     {
         public Skeleton() : base("Skeleton")
         {
-            strength = 10;
+            strength = 4;
             EquipItem(new Weapon("wand", "a long wand", 4));
         }
     }
@@ -45,7 +45,7 @@ namespace Battle_System.Classes.Entities
     {
         public Witches() : base("Witches")
         {
-            strength = 10;
+            strength = 6;
             EquipItem(new Weapon("wand", "a long wand", 4));
         }
     }
@@ -54,7 +54,7 @@ namespace Battle_System.Classes.Entities
     {
         public Giant() : base("Giant")
         {
-            strength = 10;
+            strength = 11;
             EquipItem(new Weapon("wand", "a long wand", 4));
         }
     }

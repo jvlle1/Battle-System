@@ -31,6 +31,11 @@ namespace Battle_System
             {
                 Battle thisBattle = new Battle(player, enemy);
                 thisBattle.Loop();
+
+                if (player.GetHp() <= 0)
+                {
+                    break; 
+                }
             }
         }
 
@@ -40,9 +45,8 @@ namespace Battle_System
 
             string playerClassChoice = OptionCheck("Select your class from the list below:\n" +
                 "1: Fighter\n" +
-                "2: Magician\n" +
-                "3: Knight", 
-                new string[] { "1", "2", "3" });
+                "2: Magician\n",
+                new string[] { "1", "2"});
 
             if (playerClassChoice == "1")
             {
@@ -51,10 +55,6 @@ namespace Battle_System
             else if (playerClassChoice == "2")
             {
                 player = new Magician(playerName);
-            }
-            else if (playerClassChoice == "3")
-            {
-                player = new Knight(playerName);
             }
 
             return player;
